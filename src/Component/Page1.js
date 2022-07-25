@@ -10,10 +10,10 @@ const Page1 = () => {
     }, [])
     return (
         <div className='text-light'>
-            <table className='table-lg w-100 mb-3'>
+            <table className=' w-100 mb-3'>
 
 
-                <tbody className='text-light' >
+                <tbody className='text-light px-4 ' >
                     {
                         infos.map(info => <DetailInfo key={info.userId}
                             info={info}
