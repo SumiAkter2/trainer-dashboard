@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DetailInfo from './DetailInfo';
-
+import ProgressBar from "@ramonak/react-progress-bar";
 const Page1 = () => {
     const [infos, setInfo] = useState([]);
     useEffect(() => {
@@ -9,18 +9,23 @@ const Page1 = () => {
             .then(data => setInfo(data))
     }, [])
     return (
-        <div className='text-light'>
-            <table className=' w-100 mb-3'>
+        <div className='text-light container text-center'>
+            <div className='row'>
 
 
-                <tbody className='text-light px-4 ' >
-                    {
-                        infos.map(info => <DetailInfo key={info.userId}
-                            info={info}
-                        ></DetailInfo>)
-                    }
-                </tbody>
-            </table>
+
+                {
+                    infos.map(info => <DetailInfo key={info.userId}
+                        info={info}
+                    ></DetailInfo>)
+                }
+
+            </div>
+            <div className='w-25 '>
+                <ProgressBar completed={50} maxCompleted={70} />
+                <ProgressBar completed={30} maxCompleted={70} />
+                <ProgressBar completed={60} maxCompleted={70} />
+            </div>
         </div>
     );
 };

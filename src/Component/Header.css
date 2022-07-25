@@ -2,3 +2,12 @@
     fill: white;
 
 }
+
+.header h5 {
+    padding-right: 120px;
+}
+
+.icon-alarm {
+
+    fill: #36F5C7;
+}
