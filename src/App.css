@@ -2,3 +2,6 @@
   background-color: rgb(47, 60, 66);
 
 }
+.progress:hover{
+  background-color: aquamarine;
+}
